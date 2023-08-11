@@ -1,6 +1,8 @@
 package v1
 
-import "github.com/fossteams/teams-api/pkg/models"
+import (
+	models "github.com/fossteams/teams-api/pkg/models"
+)
 
 type Conversations struct {
 	Chats []Chat `json:"chats"`
@@ -22,7 +24,7 @@ type Team struct {
 	Creator     string    `json:"creator"`
 	Id          string    `json:"id"`
 	DisplayName string    `json:"displayName"`
-	Channels    []Channel `json:"channels"`
+	Channels    []Channel `json:"channels"'`
 }
 
 type Channel struct {
@@ -42,10 +44,9 @@ type ChatMember struct {
 }
 
 type ShortMessage struct {
-	Id           string `json:"id"`
-	CleanContent string `json:"cleanContent"`
-	Content      string `json:"content"`
-	From         string `json:"from"`
+	Id      string `json:"id"`
+	Content string `json:"content"`
+	From    string `json:"from"`
 }
 
 type Message struct {
